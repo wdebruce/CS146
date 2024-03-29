@@ -6,4 +6,5 @@ Hint: There are 3 well known ways to solve this problem!
 
 ------------------------------------------------------------------------------
 Solution:
-
+My initial guess would just to use a nested loop to find all combinations of indices that add up to the target.
+Then return those two indices.
