@@ -1,1 +1,24 @@
+Problem to solve:
+Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
 
+Constraints:
+
+The number of nodes in the tree is in the range [0, 2000].
+-1000 <= TreeNode value <= 1000
+
+Expected outcome:
+Output: [[4],[3,8],[1,5,9]]
+Explanation: 4 is the root, and the only node on its level. 3,8 are one level down, together. 
+1,5,9, the leaf nodes, are next level down.
+
+Input: TreeNode with value,left,right = None provided
+Output: None
+Explanation: If there are no nodes in the tree, you can just return None. 
+
+-------------------------------------------------
+My Solution:
+Traverse the tree level by level.
+Each level queue the nodes from the next level
+Each level remove and process the values from each node in queue into a linkedList
+Once finished from a level, add that list of values into a List of Lists (levelOrder)
+Repeat until queue is empty.
