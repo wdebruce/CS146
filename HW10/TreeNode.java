@@ -9,7 +9,7 @@ public class TreeNode{
 		 this.val = val;
 		 this.left = left;
 		 this.right = right;
-		 this.count = 0;
+		 this.count = 1;
 	 }
      
 	 //fixes root and calls insertHelper
