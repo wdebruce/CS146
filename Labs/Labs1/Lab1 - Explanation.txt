@@ -1,0 +1,10 @@
+Lab1 - Explanation
+
+Problem:
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+
+Explanation:
+I used a nested array to compare all combinations of 2 values in the array.
+And I return the indices of the 2 values that equal the target.
