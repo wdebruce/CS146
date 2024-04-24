@@ -1,0 +1,13 @@
+/**Lab2
+ * Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+ * An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, 
+ * typically using all the original letters exactly once.
+ * Hint: There are 2 well-known ways to solve this problem!
+ */
+
+I put Strings s and t into an array translating each character into their corresponding
+order number in the alphabet such that a,b,c,...z corresponded to 0,1,2,...25.
+Then I used counting sort to increment the frequency of each letter that appeared in the
+given strings. Instead of outputting a sorted array of numbers, I simply compared the
+counted arrays of s and t. If s and t had the same frequencies of letters, then I could
+conclude that that t is an anagram of s.
