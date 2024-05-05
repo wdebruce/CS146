@@ -1,0 +1,27 @@
+Homework 3
+
+MATRIX_MULTIPLY(A, B): 
+  if columns(A) ≠ rows(B): 
+    raise ValueError("Matrix multiplication is not defined.") 
+
+  rows_A ← number of rows in A 
+  cols_A ← number of columns in A 
+  cols_B ← number of columns in B 
+  result ← matrix of size rows_A x cols_B filled with zeros 
+
+  for i from 1 to rows_A do: 
+    for j from 1 to cols_B do: 
+    sum ← 0 
+      for k from 1 to cols_A do: 
+        sum ← sum + A[i][k] * B[k][j] 
+      result[i][j] ← sum return result
+
+Explanation: if n = columns(A) = rows(B), v = columns(V), and u = rows(A).
+	then we can say time complexity of Matrix multiplication is O(n*v*u).
+Worst Case Scenario: O(n^3)
+	If n = v = u, then matrix A and matrix B are both size nxn.
+Best Case Scenario: O(n)
+              If v=u, then Matrix A and Matrix B are 1xn and nx1, respectively.
+Average Case Scenario: O(n^3)
+              If we took the average of O(n^3) and O(n), then O((n^3+n)/2)
+	so by taking the higher power, it would tend to O(n^3).
