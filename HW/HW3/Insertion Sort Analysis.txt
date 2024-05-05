@@ -11,16 +11,12 @@ for i = 1 to n
                j = j - 1
         A[j + 1] = key
 
-Best case scenario: O(n)
-        Explanation: array is sorted so each index is visited once, so the
-        Insertion Sort runs O(n).
-Worst case scenario: O(n^2)
-        Explanation: array is sorted in the total opposite order, so each and every 
-        character must be sorted. Each iteration of the for loop includes i swaps and there
-        should be n iterations of the for loop. Then we can say that the worst case, could be
-        the sum of each of the i steps (1 + 2 + 3 + ... + n) which we know is sum of finite
-        sequence of numbers. = n(n+1)/2
-        so O(n(n+1)/2) = O((n^2+n)/2) = highest power = O(n^2)
-Average case scenario: O(n^2)
-        Explanation: this should be in between O(n) and O(n^2), the average of both
-        gives O((n+n^2)/2) which would simply yield the highest power of O(n^2)
+Explanation:
+Time complexity for Insertion-Sort should be O(n^2). 
+My initial reasoning for this is that there is a while loop nested inside a for loop,
+which usually gives O(n^2). However, the while loop may not always be executed n times during each iteration of the for loop.
+But I think of the worst case which the array is arranged totally backwards of the sorting, so the while loop will be
+running i times during the ith iteration, which there will be n of these. so we in the worst case we could say
+a sequence of 1 + 2 + 3 + 4 + ... + n which is the sum of finite sequence which is equal to n(n+1)/2
+so I can say the time complexity is O(n(n+1)/2) which can be rewritten as O((n^2+1)/2).
+As n^2 is the highest power, we can just simplify the complexity to O(n^2).
