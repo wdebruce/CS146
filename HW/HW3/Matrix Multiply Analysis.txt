@@ -16,12 +16,8 @@ MATRIX_MULTIPLY(A, B):
         sum ← sum + A[i][k] * B[k][j] 
       result[i][j] ← sum return result
 
-Explanation: if n = columns(A) = rows(B), v = columns(V), and u = rows(A).
-	then we can say time complexity of Matrix multiplication is O(n*v*u).
-Worst Case Scenario: O(n^3)
-	If n = v = u, then matrix A and matrix B are both size nxn.
-Best Case Scenario: O(n)
-              If v=u, then Matrix A and Matrix B are 1xn and nx1, respectively.
-Average Case Scenario: O(n^3)
-              If we took the average of O(n^3) and O(n), then O((n^3+n)/2)
-	so by taking the higher power, it would tend to O(n^3).
+Explanation:
+Time Complexity for Matrix Multiplication is O(n^3).
+My initial thoughts is that there is 3 nested loops, so naturally it would be O(n*n*n) or O(n^3).
+But to be more specific if Matrix A is size gxn and Matrix B is size nxh. I think of the worst case
+where n = g = h, then it yields (n^3).
