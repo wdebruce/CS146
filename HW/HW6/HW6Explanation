@@ -1,0 +1,8 @@
+#Homework6 Explanation
+
+I used a triple nested for loop to find the indices of the three sum elements that statisfied the requirements and
+constraints of the assignment.
+It is quite simple algorithm and approach to it, but it works. However, I did notice that my list also returns permutations of
+the indices that satisfy the sum requirement. In further effort, I should eliminate this behavior from my code as to simply
+return the possible combinations from the given array, in other words, once an index is used and appended to the mainList
+it should not be used again in a different iteration of the loops.
