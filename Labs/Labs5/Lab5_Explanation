@@ -1,0 +1,6 @@
+For Lab5 I recursively visited each node and determined whether or not it was a valid BST by comparing the value in the node
+to the value of a minimum and maximum value of the subtree.
+So the left subtree of the root should be in the range of negative infinity and root value and the rightsubtree of the root
+should be between the root value and positive infinity.
+And as I traverse the tree, the range of any given node will narrow and eventually return true or false of valid BST.
+So its almost like going down a funnel.
