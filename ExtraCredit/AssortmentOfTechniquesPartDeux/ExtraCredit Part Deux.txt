@@ -1,0 +1,49 @@
+#1: Can we use heaps as priority queues? How so? Write an explanation, with the help of pseudocode/diagrams to support your explanation.
+
+#2: Given a max heap, is there a way to use the max heap as a min heap, without writing a whole min heap implementation? Is the opposite also true? 
+Justify your answer with pseudocode, and/or python OR java code, and explain your answer.  
+
+Answer both questions for extra credit. 
+
+#1: heaps can be used as priority queues just without the swapping and min or max heapify, 
+the index representation of a heap already mirrors that of a priority queue
+a queue's First-In-First-Out behavior is similiar to extracting a heap's root or top node.
+and a any new keys are simply added at the end/bottom of the heap
+
+pseudocode for heap:                                       Equivalent pseudocode for priority queue: 
+create a heap                                                  create priority queue pq                                                                   
+
+insert(x){                                                         pq.add(x)
+int i = current_heap_size
+heapArray[i] = x
+}
+
+extract(){                                                        pq.poll()
+ int extract = heapArray(0)
+ for i = 0 in heapArray; i++:
+      heapArray[i] = i+1
+      //moves the heap upwards
+return extract 
+}
+
+
+#2: My initial thought is just to negate the values as you put them into the maxheap
+the maxheap will still have the largest value on top (even if all values of negative)
+however the absolute values of all the numbers in the maxheap will be in a minheap order
+so when you extract a value from the maxheap you simply negate it again to get the original value
+
+Pseudocode for maxheap as minheap:
+
+insert(x){
+int x = -x
+heapArray[length-1] = x;
+maxHeapify()
+}
+
+extract(){
+ int extract = heapArray(0)
+ for i = 0 in heapArray; i++:
+      heapArray[i] = i+1
+      //moves the heap upwards
+return -extract 
+}
