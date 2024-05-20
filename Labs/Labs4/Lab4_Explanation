@@ -1,0 +1,7 @@
+Wow, so inverting the tree was alot easier than I intially realized.
+We're simply inverting the subtree, so with that logic we can recursively swap each node then call their
+left and right children to do the same and so forth.
+However in my case I found it hard to show that it was inverted. I tried using an arraylist to track the inversions at each
+node, but the arraylist continued to return the original order of the node values, so I'm not really sure if I'm printing
+the inverted tree wrong or if my invertTree method is not actually inverting the tree. Anyways the inversion makes sense 
+in my head, but my implementation may say otherwise.
